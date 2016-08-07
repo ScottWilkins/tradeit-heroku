@@ -44,9 +44,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 passport.use(new FBStrategy({
-    clientID: process.env.clientID,
-    clientSecret: process.env.FB_CLIENT_SECRET,
-    callbackURL: process.env.HOST + "/auth/facebook/callback"
+    clientID: process.env.FACEBOOK_CLIENT_ID,
+    clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+    callbackURL: process.env.HOST + "/auth/facebook/FACEBOOK_CALLBACK_URL"
   },
   function(token, tokenSecret, profile, done) {
     FbInfo.facebook_id = profile.id;
